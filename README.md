@@ -44,3 +44,18 @@ The following graphs were created:
 4. Histogram
 5. Pie chart
   - how to set percent values.
+  
+ # Amazon review Sentiment Analysis (ML)
+ 
+In this project i followed [tutorial](https://youtu.be/M9Itm95JzL0) and tried to build a ml-model, that can predict if review is possitive or negative.
+
+Main steps are:
+1. Loading data & cleaning it. Creating auxiliary classes to keep code clean and understandable
+2. After checking that there are much more positive reviews than negative, cut off rest of extra positive reviews. This action keep our model in blanace (equal amount of test data (positive and negative reviews))
+3. Vectorization of reviews( *bag of words + tfidf*)
+4. Classification using **sklearn-library**
+5. Tuning out clf-s with grid search to find best hyperparams
+6. Save/Load models with **pickle-library**
+
+ 
+ 
