@@ -1,4 +1,6 @@
-# Sales-Analysis
+# Project
+
+## Sales-Analysis
 Sales analysis of the online electronics store.
 
 This project is based on [tutorial](https://youtu.be/eMOA1pPVUc4).
@@ -16,7 +18,7 @@ Main stages of this analysis are:
 3. Adding necessary info to perform analysis
 4. Answering questions.
 
-# Pokemon-Analysis
+## Pokemon-Analysis
 
 Basic data analysis of the pokemon-data
 
@@ -29,7 +31,7 @@ Following interesing manipulations are done:
 4. Conditional changes.
     - Change value of one column, while there is a condition on on other column.
     
-# Graphs
+## Graphs
 This notebook is created for practice of creating data-graphs.
 
 The following tutorials were used:
@@ -45,7 +47,7 @@ The following graphs were created:
 5. Pie chart
   - how to set percent values.
   
- # Amazon review Sentiment Analysis (ML)
+## Amazon review Sentiment Analysis (ML)
  
 In this project i followed [tutorial](https://youtu.be/M9Itm95JzL0) and tried to build a ml-model, that can predict if review is possitive or negative.
 
@@ -57,5 +59,19 @@ Main steps are:
 5. Tuning out clf-s with grid search to find best hyperparams
 6. Save/Load models with **pickle-library**
 
+## Generating mock data 
  
- 
+This jupyter notebook is created following this [tutorial](https://youtu.be/VJBY2eVtf7o)
+
+Main points are:
+1. Use **random library** to create random-orders
+   - random.choice() - to choose one element from list
+   - random.choices(population=(list to choose from), weights=(weight_list of each element) - choose elements with unequal probability to make order list more realstic
+2. Use **calendar library** to:
+    - getting name of months from month-index
+    - getting number of days of month
+3. Generating pseudo-random order time with two pick time - 11am and 20pm :
+    - randomization is created by adding a random(normal-distribution) time-delta to hour 
+    `time_offset = int(np.random.normal(loc= 0, scale = 180))`
+4. Generating 'realistic' order-number of some products. Order number of a product depends on its cost.
+    - Use *Geometric distribution* for it `quantity_ordered = np.random.geometric(p = 1.0 - (1.0/price))`
